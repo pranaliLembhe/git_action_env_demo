@@ -13,6 +13,8 @@ jobs:
       Greeting: Hello
     steps:
       - name: "Say Hello Mona it's Tuesday"
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        run: |
+          echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+          echo "github actor check $GITHUB_ACTOR"
         env:
           First_Name: Pranali
